@@ -1,0 +1,10 @@
+rebase 命令
+
+执行命令 git rebase -i c5e3b788106e86c1c07c407eb6a61603b15d9ab7，会进入交互式 rebase 模式。
+在编辑器中，将要修改的提交行（f4e76f1a98a981e12cc57849fbcdf548a5053c20）前面的 pick 修改为 edit。
+保存并关闭编辑器，rebase 会自动停在要修改的提交上。
+修改文件并保存。
+执行命令 git add <filename> 将修改的文件添加到暂存区。
+执行命令 git commit --amend -C HEAD，将修改的文件添加到当前的提交中。
+执行命令 git rebase --continue，继续 rebase 操作。
+如果需要，可以通过 git push --force 强制推送修改到远程仓库。
